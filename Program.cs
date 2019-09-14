@@ -8,24 +8,23 @@ namespace SelectionSort
         static void Main(string[] args)
         {
             int[] array = new int[15] { 45, 72, 58, 92, 26, 4, 13, 90, 81, 15, 33, 36, 47, 8, 54 };
-            int count = 15;
+            
             Console.WriteLine("Selection Sort");
             Console.WriteLine("Before Sorting ... ");
 
             //First, output starting state of the array
             Array.ForEach(array, i => Console.WriteLine(i));
     
-
             int temp, smallest;
 
             //The algorithm builds the sorted list from the left.
             //1. For each item in the array...
-            for (int i = 0; i < count - 1; i++)
+            for (int i = 0; i < array.Length - 1; i++)
             {
                 //2. ...assume the first item is the smallest value
                 smallest = i;
                 //3. Cycle through the rest of the array
-                for (int j = i + 1; j < count; j++)
+                for (int j = i + 1; j < array.Length; j++)
                 {
                     //4. If any of the remaining values are smaller, find the smallest of these
                     if (array[j] < array[smallest])
